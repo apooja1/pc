@@ -471,6 +471,82 @@ Ensure consistent sizing for all icons
     fill: #FF69B4; /* Pink color on hover */
 }
 
+/* Base responsive styles */
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.header-collage {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .header-collage {
+        flex-direction: column;
+    }
+
+    .intro-text {
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+
+    .social-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .profile-picture {
+        max-width: 150px;
+        height: auto;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 0.8rem;
+    }
+
+    .social-icons a {
+        font-size: 1.2rem;
+    }
+}
+
 
 
 
