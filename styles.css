@@ -150,7 +150,6 @@ main::after {
 }
 
 .references {
-    list-style-type: none;
     padding: 0;
     margin-top: 20px;
 }
@@ -333,7 +332,6 @@ footer {
 }
 
 .sidebar nav ul {
-    list-style-type: none;
     padding: 0;
 }
 
@@ -729,7 +727,6 @@ html, body {
 
 /* Fix bullet points for video links */
 .video-links ul {
-    list-style-type: disc !important; /* Ensures correct bullet points */
     padding-left: 25px;
 }
 
@@ -776,34 +773,4 @@ html, body {
     header h1 {
         font-size: 1.4rem;
     }
-}
-
-
-
-/* Fix bullet points for lists */
-.video-links ul {
-    list-style-type: disc !important; /* Standard bullet points */
-    list-style-position: inside !important; /* Move bullets inside */
-    padding-left: 15px; /* Adjust spacing */
-    margin: 0;
-}
-
-/* Style the bullet points to be pink */
-.video-links li {
-    font-family: inherit !important; /* Fix encoding issues */
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    color: #FF69B4; /* Pink text */
-}
-
-/* Make the bullet points pink */
-.video-links li::marker {
-    color: #FF69B4 !important; /* Pink bullets */
-    font-size: 1.2rem; /* Adjust bullet size */
-}
-
-/* Ensure no weird encoding symbols */
-.video-links li::before {
-    content: none !important; /* Prevent double bullets */
 }
