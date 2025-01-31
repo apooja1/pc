@@ -362,14 +362,14 @@ footer {
 }
 
 .sidebar nav ul li a::before {
-    content: 'â–¶';
+    content: '\25B6'; /* ▶ */
     margin-right: 10px;
     font-size: 0.8em;
     color: #FF69B4; /* Hot pink for the play icon */
 }
 
 .sidebar nav ul li a:hover::before {
-    content: 'â–¶â–¶';
+    content: '\25B6\25B6'; /* ▶▶ */
 }
 
 main {
