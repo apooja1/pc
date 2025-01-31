@@ -777,3 +777,23 @@ html, body {
         font-size: 1.4rem;
     }
 }
+.video-links ul {
+    list-style-type: disc !important; /* Proper bullet points */
+    padding-left: 20px;
+    font-family: inherit; /* Ensures correct font rendering */
+}
+
+/* Fix weird bullet symbols */
+.video-links li::before {
+    content: "•"; /* Standard bullet point */
+    color: #000; /* Bullet color */
+    font-size: 1rem; /* Bullet size */
+    margin-right: 8px;
+}
+
+/* Ensure proper spacing */
+.video-links li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
