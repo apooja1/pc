@@ -777,23 +777,26 @@ html, body {
         font-size: 1.4rem;
     }
 }
-.video-links ul {
-    list-style-type: disc !important; /* Proper bullet points */
-    padding-left: 20px;
-    font-family: inherit; /* Ensures correct font rendering */
+
+
+
+/* Fix bullet points for lists */
+ul {
+    list-style-type: disc !important; /* Ensures proper bullet points */
+    padding-left: 20px; /* Proper indentation */
 }
 
-/* Fix weird bullet symbols */
-.video-links li::before {
-    content: "•"; /* Standard bullet point */
-    color: #000; /* Bullet color */
-    font-size: 1rem; /* Bullet size */
-    margin-right: 8px;
+li {
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 8px;
 }
 
-/* Ensure proper spacing */
-.video-links li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+/* Ensure proper bullet rendering */
+li::before {
+    content: "â€¢"; /* Standard bullet */
+    color: #000; /* Ensure it is visible */
+    font-size: 1rem; /* Standard bullet size */
+    position: absolute;
+    left: 0;
 }
