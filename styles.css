@@ -774,3 +774,30 @@ html, body {
         font-size: 1.4rem;
     }
 }
+.contact-button {
+    position: relative;
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    background-color: #FF69B4;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    width: 90%; /* Ensure it takes proper space */
+}
+
+/* Ensure the button is visible on mobile */
+@media screen and (max-width: 768px) {
+    .contact-button {
+        position: relative; /* Prevent it from being cut off */
+        bottom: auto; /* Reset any absolute positioning */
+        margin-bottom: 50px; /* Add extra space at the bottom */
+    }
+
+    .container {
+        padding-bottom: 80px; /* Ensure enough space for the button */
+    }
+}
+
