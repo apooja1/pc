@@ -364,14 +364,14 @@ footer {
 }
 
 .sidebar nav ul li a::before {
-    content: '▶';
+    content: 'â–¶';
     margin-right: 10px;
     font-size: 0.8em;
     color: #FF69B4; /* Hot pink for the play icon */
 }
 
 .sidebar nav ul li a:hover::before {
-    content: '▶▶';
+    content: 'â–¶â–¶';
 }
 
 main {
@@ -556,3 +556,137 @@ Ensure consistent sizing for all icons
 
 
 
+
+
+
+
+/* Ensure images scale properly on mobile */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Improve layout responsiveness */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .image-container {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .collage-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .video-container {
+        width: 100%;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .social-icons a {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+/* Ensure the website scales dynamically to fit any screen size */
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Make the main container responsive */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Ensures it fits well on larger screens */
+    margin: auto;
+    padding: 20px;
+}
+
+/* Responsive scaling for text */
+body {
+    font-size: 1rem; /* Default for laptop */
+}
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem; /* Scale text down for tablets */
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.85rem; /* Scale text down for mobile phones */
+    }
+
+    .container {
+        width: 100%;
+        padding: 5px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+}
