@@ -709,7 +709,7 @@ html, body {
 
 /* Fix the "Contact Me" button placement */
 .contact-button {
-    position: relative;
+    position: relative; /* Prevents cropping */
     display: block;
     margin: 20px auto;
     padding: 12px 25px;
@@ -719,10 +719,20 @@ html, body {
     text-align: center;
     border-radius: 6px;
     transition: 0.3s ease;
+    width: 90%; /* Ensures proper spacing */
 }
 
-.contact-button:hover {
-    background-color: #FF1493;
+/* Ensure the button is visible on mobile */
+@media screen and (max-width: 768px) {
+    .contact-button {
+        position: relative; /* Prevents being cut off */
+        bottom: auto; /* Removes any absolute positioning */
+        margin-bottom: 50px; /* Extra space below */
+    }
+
+    .container {
+        padding-bottom: 80px; /* Ensures space for the button */
+    }
 }
 
 /* Fix bullet points for video links */
@@ -774,30 +784,5 @@ html, body {
         font-size: 1.4rem;
     }
 }
-.contact-button {
-    position: relative;
-    display: block;
-    margin: 20px auto;
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    background-color: #FF69B4;
-    color: white;
-    text-align: center;
-    border-radius: 6px;
-    transition: 0.3s ease;
-    width: 90%; /* Ensure it takes proper space */
-}
 
-/* Ensure the button is visible on mobile */
-@media screen and (max-width: 768px) {
-    .contact-button {
-        position: relative; /* Prevent it from being cut off */
-        bottom: auto; /* Reset any absolute positioning */
-        margin-bottom: 50px; /* Add extra space at the bottom */
-    }
-
-    .container {
-        padding-bottom: 80px; /* Ensure enough space for the button */
-    }
-}
 
