@@ -362,14 +362,14 @@ footer {
 }
 
 .sidebar nav ul li a::before {
-    content: '\25B6'; /* â–¶ */
+    content: '▶'; /* Play icon */
     margin-right: 10px;
     font-size: 0.8em;
     color: #FF69B4; /* Hot pink for the play icon */
 }
 
 .sidebar nav ul li a:hover::before {
-    content: '\25B6\25B6'; /* â–¶â–¶ */
+    content: '▶▶'; /* Double play icon on hover */
 }
 
 main {
