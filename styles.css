@@ -150,6 +150,7 @@ main::after {
 }
 
 .references {
+    list-style-type: none;
     padding: 0;
     margin-top: 20px;
 }
@@ -332,6 +333,7 @@ footer {
 }
 
 .sidebar nav ul {
+    list-style-type: none;
     padding: 0;
 }
 
@@ -362,14 +364,14 @@ footer {
 }
 
 .sidebar nav ul li a::before {
-    content: '\25B6'; /* ▶ */
+    content: 'â–¶';
     margin-right: 10px;
     font-size: 0.8em;
     color: #FF69B4; /* Hot pink for the play icon */
 }
 
 .sidebar nav ul li a:hover::before {
-    content: '\25B6\25B6'; /* ▶▶ */
+    content: 'â–¶â–¶';
 }
 
 main {
@@ -556,233 +558,57 @@ Ensure consistent sizing for all icons
 
 
 
-
-
-/* Ensure images scale properly on mobile */
-img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-/* Improve layout responsiveness */
-@media (max-width: 768px) {
-    .content-wrapper {
-        flex-direction: column;
-        padding: 10px;
+/* Responsive adjustments for iPads (768px - 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        font-size: 1rem; /* Optimize text for iPads */
     }
 
-    .image-container {
-        height: auto;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .collage-image {
-        width: 100%;
-        height: auto;
+    .container, main {
+        max-width: 85%; /* Maintain readability */
+        margin: 0 auto;
     }
 
     .sidebar {
         width: 100%;
-        padding: 0;
+        padding: 1rem;
     }
 
-    main {
+    .contact-button {
+        width: 80%; /* Ensure button is properly sized */
+    }
+}
+
+/* Mobile adjustments (up to 767px) */
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .sidebar {
+        width: 100%;
         padding: 10px;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    .subtitle {
-        font-size: 1rem;
     }
 
     .video-container {
         width: 100%;
     }
-}
-
-/* Small mobile devices */
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    .subtitle {
-        font-size: 0.9rem;
-    }
-
-    .profile-picture {
-        width: 120px;
-        height: 120px;
-    }
-
-    .social-icons {
-        flex-wrap: wrap;
-        gap: 5px;
-    }
-
-    .social-icons a {
-        font-size: 1.2rem;
-    }
-}
-
-
-
-
-/* Ensure the website scales dynamically to fit any screen size */
-html, body {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-/* Make the main container responsive */
-.container {
-    width: 100%;
-    max-width: 1200px; /* Ensures it fits well on larger screens */
-    margin: auto;
-    padding: 20px;
-}
-
-/* Responsive scaling for text */
-body {
-    font-size: 1rem; /* Default for laptop */
-}
-
-@media (max-width: 1024px) {
-    body {
-        font-size: 0.95rem;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 0.9rem; /* Scale text down for tablets */
-    }
-
-    .container {
-        padding: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        font-size: 0.85rem; /* Scale text down for mobile phones */
-    }
-
-    .container {
-        width: 100%;
-        padding: 5px;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-
-    header h1 {
-        font-size: 1.4rem;
-    }
-}
-
-
-
-
-/* Ensure the website scales dynamically for all screen sizes */
-html, body {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-}
-
-/* Responsive container */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-
-/* Fix the "Contact Me" button placement */
-.contact-button {
-    position: relative; /* Prevents cropping */
-    display: block;
-    margin: 20px auto;
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    background-color: #FF69B4;
-    color: white;
-    text-align: center;
-    border-radius: 6px;
-    transition: 0.3s ease;
-    width: 90%; /* Ensures proper spacing */
-}
-
-/* Ensure the button is visible on mobile */
-@media screen and (max-width: 768px) {
-    .contact-button {
-        position: relative; /* Prevents being cut off */
-        bottom: auto; /* Removes any absolute positioning */
-        margin-bottom: 50px; /* Extra space below */
-    }
-
-    .container {
-        padding-bottom: 80px; /* Ensures space for the button */
-    }
-}
-
-/* Fix bullet points for video links */
-.video-links ul {
-    padding-left: 25px;
-}
-
-.video-links li {
-    margin-bottom: 10px;
-}
-
-/* Make the website responsive on different screen sizes */
-@media (max-width: 1024px) {
-    body {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 0.95rem;
-    }
-
-    .container {
-        padding: 10px;
-    }
 
     .contact-button {
-        width: 90%; /* Adjust width for smaller screens */
+        width: 95%; /* Ensure it fits mobile screens */
+        margin-bottom: 20px;
     }
 }
 
-@media (max-width: 480px) {
-    body {
-        font-size: 0.85rem;
-    }
-
-    .container {
-        width: 100%;
-        padding: 5px;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-
-    header h1 {
-        font-size: 1.4rem;
+/* Large screen adjustments (above 1440px) */
+@media screen and (min-width: 1440px) {
+    .container, main {
+        max-width: 75%; /* Prevent excessive stretching */
+        margin: 0 auto;
     }
 }
-
-
